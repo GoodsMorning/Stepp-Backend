@@ -1,29 +1,12 @@
 package main
 
 import (
-	"stepp-backend/initializer"
-
-	"github.com/gin-gonic/gin"
+	"log"
+	"stepp-backend/src/server"
 )
 
-func init() {
-	initializer.InitEnv()
-	initializer.ConnectDB()
-}
-
 func main() {
-	r := gin.Default()
-	r.GET("/", func(c *gin.Context) {
-		c.JSON(200, gin.H{
-			"message": "pong",
-		})
-	})
-	test := r.Group("/test");{
-		test.GET("/", func(c *gin.Context) {
-			c.JSON(200, gin.H{
-				"message": "from test",
-			})
-		})
+	if err := server.RunServer(); err != nil {
+		log.Fatal("Error cannot run server")
 	}
-	r.Run()
 }
