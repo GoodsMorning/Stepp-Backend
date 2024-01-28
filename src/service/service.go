@@ -2,10 +2,9 @@ package service
 
 import (
 	"context"
-
-	"github.com/gin-gonic/gin"
+	basepayload "stepp-backend/src/model/base"
 )
 
 type Service interface {
-	GetHello(ctx context.Context) (gin.H, error)
+	GetHello(ctx context.Context) (*basepayload.BasePayload, error)
 }

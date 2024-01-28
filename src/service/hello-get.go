@@ -2,12 +2,14 @@ package service
 
 import (
 	"context"
-
-	"github.com/gin-gonic/gin"
+	basepayload "stepp-backend/src/model/base"
 )
 
-func (s *service)GetHello(ctx context.Context) (gin.H, error) {
-	return gin.H{
-		"greeting_message": "Hi from Stepp-Backend!",
-	},nil
+func (s *service)GetHello(ctx context.Context) (*basepayload.BasePayload, error) {
+	resp := struct {
+		GreetingMessage string `json:"greeting_message"`
+	}{
+		GreetingMessage: "Hi from Stepp-Backend!",
+	}
+	return basepayload.GetSuccessResponse(resp),nil
 }
