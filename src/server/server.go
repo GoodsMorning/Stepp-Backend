@@ -11,7 +11,6 @@ import (
 
 func init() {
 	initializer.InitEnv()
-	initializer.ConnectDB()
 }
 
 func RunServer() error {
@@ -20,6 +19,6 @@ func RunServer() error {
 
 	serverHandler := handler.NewHandler(ctx)
 	router.Router(r, serverHandler)
-	
+
 	return r.Run()
 }
