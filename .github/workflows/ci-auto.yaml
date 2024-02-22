@@ -14,7 +14,7 @@ jobs:
       - name: Setup go
         uses: actions/setup-go@v4
         with:
-          go-version: 1.2
+          go-version: 1.17
       - name: Tidy and Vendor
         run: go mod tidy && go mod vendor
       - name: Run linting
