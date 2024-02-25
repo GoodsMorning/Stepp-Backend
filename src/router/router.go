@@ -7,12 +7,6 @@ import (
 )
 
 func Router(r *gin.Engine, handler handler.Handler) {
-
 	r.GET("/", handler.GetHelloHandler)
-
-	// test := r.Group("/test")
-	// {
-	// 	test.GET("/", )
-	// }
-
+	r.GET("/post/:post-id", handler.GetPostHandler)
 }
