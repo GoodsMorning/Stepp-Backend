@@ -7,4 +7,5 @@ import (
 
 type Service interface {
 	GetHello(ctx context.Context) (*basepayload.BasePayload, error)
+	GetPost(ctx context.Context, postId int) (*basepayload.BasePayload, error)
 }
