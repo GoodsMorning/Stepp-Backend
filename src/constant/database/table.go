@@ -3,6 +3,6 @@ package table
 const (
 	POST     = "post"
 	ORIGINAL = "original_post"
-	USER     = "user"
+	USER     = "public.user"
 	LOCATION = "location"
 )

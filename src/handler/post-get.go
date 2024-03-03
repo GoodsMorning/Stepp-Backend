@@ -25,7 +25,7 @@ func (h *handler) GetPostHandler(c *gin.Context) {
 			c.JSON(http.StatusOK, basepayload.GetErrorResponse(constant.GENERIC_ERROR, "Post ID Not Found"))
 			return
 		}
-		c.JSON(http.StatusOK, basepayload.GetErrorResponse(constant.GENERIC_ERROR, err))
+		c.JSON(http.StatusBadRequest, basepayload.GetErrorResponse(constant.GENERIC_ERROR, err))
 		return
 	}
 
