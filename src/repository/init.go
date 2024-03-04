@@ -14,7 +14,7 @@ type repository struct {
 }
 
 func NewRepository(ctx context.Context) Repository {
-	db, gormDb, err := initializer.ConnectDB()
+	db, gormDb, err := initializer.ConnectDB(ctx)
 	if err != nil {
 		log.Fatal("Error connecting to the database:", err)
 	}
