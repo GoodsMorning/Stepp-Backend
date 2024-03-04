@@ -36,6 +36,10 @@ jobs:
         with:
           credentials_json: '${{ secrets.GCP_CREDENTIALS }}'
 
+      # Tidy and Vendor
+      - name: Tidy and Vendor
+        run: go mod tidy && go mod vendor
+
       - name: Deploy to Cloud Run
         id: deploy
         uses: google-github-actions/deploy-cloudrun@v2.2.0
