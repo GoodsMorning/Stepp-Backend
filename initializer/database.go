@@ -1,6 +1,7 @@
 package initializer
 
 import (
+	"context"
 	"database/sql"
 	"fmt"
 	_ "github.com/lib/pq"
@@ -8,9 +9,9 @@ import (
 	"gorm.io/gorm"
 )
 
-func ConnectDB() (*sql.DB, *gorm.DB, error) {
+func ConnectDB(ctx context.Context) (*sql.DB, *gorm.DB, error) {
 
-	credential, err := LoadCredential()
+	credential, err := LoadCredential(ctx)
 	if err != nil {
 		return nil, nil, err
 	}
