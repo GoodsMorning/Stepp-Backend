@@ -43,7 +43,7 @@ jobs:
           service: ${{ env.SERVICE }}
           region: ${{ env.REGION }}
           # NOTE: If required, update to the appropriate source folder
-          source: ./main.go
+          source: ./
 
       - name: Build Go application
         run: go build main.go
