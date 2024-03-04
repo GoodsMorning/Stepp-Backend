@@ -2,8 +2,8 @@ package server
 
 import (
 	"context"
-	"stepp-backend/initializer"
 	"stepp-backend/src/handler"
+	"stepp-backend/src/initializer"
 	"stepp-backend/src/router"
 
 	"github.com/gin-gonic/gin"
