@@ -5,9 +5,9 @@ on:
     branches: [ "release" ]
 
 env:
-  PROJECT_ID: senior-project-412514 # TODO: update Google Cloud project id
-  SERVICE: stepp-backend # TODO: update Cloud Run service name
-  REGION: asia-southeast1 # TODO: update Cloud Run service region
+  PROJECT_ID: senior-project-412514
+  SERVICE: stepp-backend
+  REGION: asia-southeast1
   RELEASE : true
 
 jobs:
@@ -36,7 +36,6 @@ jobs:
         with:
           credentials_json: '${{ secrets.GCP_CREDENTIALS }}'
 
-      # Tidy and Vendor
       - name: Tidy and Vendor
         run: go mod tidy && go mod vendor
 
@@ -47,7 +46,7 @@ jobs:
           service: ${{ env.SERVICE }}
           region: ${{ env.REGION }}
           # NOTE: If required, update to the appropriate source folder
-          source: ./
+          source: ./src
 
       - name: Build Go application
         run: go build main.go

@@ -5,7 +5,7 @@ import (
 	"database/sql"
 	"gorm.io/gorm"
 	"log"
-	"stepp-backend/initializer"
+	"stepp-backend/src/initializer"
 )
 
 type repository struct {
