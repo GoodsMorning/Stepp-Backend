@@ -1,12 +1,22 @@
 package initializer
 
 import (
+	"context"
 	"encoding/json"
 	"fmt"
 	"os"
 )
 
-func LoadCredential() (*Credential, error) {
+func LoadCredential(ctx context.Context) (*Credential, error) {
+
+	if os.Getenv("RELEASE") == "true" {
+		credential, err := GetSecret(ctx)
+		if err != nil {
+			return nil, err
+		}
+		return credential, nil
+	}
+
 	file, err := os.Open("./credential/postgres.json")
 	if err != nil {
 		fmt.Println("Error opening config file: ./credential/postgres.json", err)

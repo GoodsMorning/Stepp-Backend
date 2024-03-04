@@ -2,36 +2,37 @@ package initializer
 
 import (
 	"context"
+	"encoding/json"
 	"fmt"
-	"io"
+	"os"
 
 	secretmanager "cloud.google.com/go/secretmanager/apiv1"
 	"cloud.google.com/go/secretmanager/apiv1/secretmanagerpb"
 )
 
-func getSecret(w io.Writer, name string) error {
-	// name := "projects/my-project/secrets/my-secret"
+func GetSecret(ctx context.Context) (*Credential, error) {
 
-	// Create the client.
-	ctx := context.Background()
+	fmt.Println("PROJECT_NAME : " + os.Getenv("PROJECT_NAME"))
+
 	client, err := secretmanager.NewClient(ctx)
 	if err != nil {
-		return fmt.Errorf("failed to create secretmanager client: %w", err)
+		return nil, fmt.Errorf("failed to create Secret Manager client: %v", err)
 	}
 	defer client.Close()
 
-	// Build the request.
-	req := &secretmanagerpb.GetSecretRequest{
-		Name: name,
+	req := &secretmanagerpb.AccessSecretVersionRequest{
+		Name: os.Getenv("PROJECT_NAME"),
 	}
 
-	// Call the API.
-	result, err := client.GetSecret(ctx, req)
+	result, err := client.AccessSecretVersion(ctx, req)
 	if err != nil {
-		return fmt.Errorf("failed to get secret: %w", err)
+		return nil, fmt.Errorf("failed to access secret version: %v", err)
 	}
 
-	replication := result.Replication.Replication
-	fmt.Fprintf(w, "Found secret %s with replication policy %s\n", result.Name, replication)
-	return nil
+	var credential Credential
+	if err := json.Unmarshal(result.Payload.Data, &credential); err != nil {
+		return nil, fmt.Errorf("failed to decode secret value: %v", err)
+	}
+
+	return &credential, nil
 }
