@@ -8,11 +8,10 @@ env:
   PROJECT_ID: senior-project-412514
   SERVICE: stepp-backend
   REGION: asia-southeast1
-  RELEASE : true
+  RELEASE: true
 
 jobs:
   deploy:
-    # Add 'id-token' with the intended permissions for workload identity federation
     permissions:
       contents: 'read'
       id-token: 'write'
@@ -22,14 +21,6 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
 
-#      - name: Google Auth
-#        id: auth
-#        uses: 'google-github-actions/auth@v0'
-#        with:
-#          workload_identity_provider: '${{ secrets.WIF_PROVIDER }}' # e.g. - projects/123456789/locations/global/workloadIdentityPools/my-pool/providers/my-provider
-#          service_account: '${{ secrets.WIF_SERVICE_ACCOUNT }}' # e.g. - my-service-account@my-project.iam.gserviceaccount.com
-
-      # NOTE: Alternative option - authentication via credentials json
       - name: Google Auth
         id: auth
         uses: google-github-actions/auth@v2.1.2
@@ -39,18 +30,22 @@ jobs:
       - name: Tidy and Vendor
         run: go mod tidy && go mod vendor
 
+      - name: Build Docker image
+        run: |
+          docker build -t ${{ env.SERVICE }} .
+          docker tag ${{ env.SERVICE }} gcr.io/${{ env.PROJECT_ID }}/${{ env.SERVICE }}
+
+      - name: Push Docker image to Container Registry
+        run: |
+          docker push gcr.io/${{ env.PROJECT_ID }}/${{ env.SERVICE }}
+
       - name: Deploy to Cloud Run
         id: deploy
         uses: google-github-actions/deploy-cloudrun@v2.2.0
         with:
           service: ${{ env.SERVICE }}
           region: ${{ env.REGION }}
-          # NOTE: If required, update to the appropriate source folder
-          source: ./src
+          image: gcr.io/${{ env.PROJECT_ID }}/${{ env.SERVICE }}
 
-      - name: Build Go application
-        run: go build main.go
-
-      # If required, use the Cloud Run url output in later steps
       - name: Show Output
         run: echo ${{ steps.deploy.outputs.url }}
