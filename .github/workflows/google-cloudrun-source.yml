@@ -30,6 +30,14 @@ jobs:
       - name: Tidy and Vendor
         run: go mod tidy && go mod vendor
 
+      - name: Build Docker image
+        run: |
+          docker build -t ${{ env.SERVICE }} .
+          docker tag ${{ env.SERVICE }} gcr.io/${{ env.PROJECT_ID }}/${{ env.SERVICE }}
+
+      - name: Push Docker image to Container Registry
+        run: |
+          docker push gcr.io/${{ env.PROJECT_ID }}/${{ env.SERVICE }}
 
       - name: Deploy to Cloud Run
         id: deploy
@@ -37,6 +45,7 @@ jobs:
         with:
           service: ${{ env.SERVICE }}
           region: ${{ env.REGION }}
+          image: gcr.io/${{ env.PROJECT_ID }}/${{ env.SERVICE }}
 
       - name: Show Output
         run: echo ${{ steps.deploy.outputs.url }}
