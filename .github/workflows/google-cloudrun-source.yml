@@ -35,6 +35,10 @@ jobs:
           docker build -t ${{ env.SERVICE }} .
           docker tag ${{ env.SERVICE }} gcr.io/${{ env.PROJECT_ID }}/${{ env.SERVICE }}
 
+      - name: Authenticate Docker with GCR
+        run: |
+          gcloud auth configure-docker
+
       - name: Push Docker image to Container Registry
         run: |
           docker push gcr.io/${{ env.PROJECT_ID }}/${{ env.SERVICE }}
