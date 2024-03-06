@@ -27,9 +27,6 @@ jobs:
         with:
           credentials_json: '${{ secrets.GCP_CREDENTIALS }}'
 
-      - name: Tidy and Vendor
-        run: go mod tidy && go mod vendor
-
       - name: Build Docker image
         run: |
           docker build -t ${{ env.SERVICE }} .
@@ -45,7 +42,7 @@ jobs:
 
       - name: Deploy to Cloud Run
         id: deploy
-        uses: google-github-actions/deploy-cloudrun@v2.2.0
+        uses: google-github-actions/deploy-cloudrun@v0
         with:
           service: ${{ env.SERVICE }}
           region: ${{ env.REGION }}
