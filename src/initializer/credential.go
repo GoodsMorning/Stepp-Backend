@@ -9,6 +9,7 @@ import (
 
 func LoadCredential(ctx context.Context) (*Credential, error) {
 
+	fmt.Println("try use env RELEASE = ", os.Getenv("RELEASE"))
 	if os.Getenv("RELEASE") == "true" {
 		credential, err := GetSecret(ctx)
 		if err != nil {

@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dc6d1bc6-7f35-453f-9953-cd4d0b11a17b" name="Changes" comment="gcloud self command" />
+    <list default="true" id="dc6d1bc6-7f35-453f-9953-cd4d0b11a17b" name="Changes" comment="add region" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -91,7 +91,7 @@
       <recent name="$PROJECT_DIR$" />
     </key>
   </component>
-  <component name="RunManager" selected="Docker.Dockerfile builder">
+  <component name="RunManager" selected="Go Build.go build main.go">
     <configuration name="go build main.go" type="GoApplicationRunConfiguration" factoryName="Go Application" nameIsGenerated="true">
       <module name="stepp-backend" />
       <working_directory value="$PROJECT_DIR$" />
@@ -174,7 +174,8 @@
     <MESSAGE value="fix Dockerfile port to 8080 same as expose" />
     <MESSAGE value="install gcloud" />
     <MESSAGE value="gcloud self command" />
-    <option name="LAST_COMMIT_MESSAGE" value="gcloud self command" />
+    <MESSAGE value="add region" />
+    <option name="LAST_COMMIT_MESSAGE" value="add region" />
   </component>
   <component name="VgoProject">
     <settings-migrated>true</settings-migrated>
