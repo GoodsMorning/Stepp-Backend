@@ -27,6 +27,12 @@ jobs:
         with:
           credentials_json: '${{ secrets.GCP_CREDENTIALS }}'
 
+      - name: Install gcloud
+        uses: google-github-actions/setup-gcloud@v0.2.0
+        with:
+          version: 'latest'
+          project_id: ${{ env.PROJECT_ID }}
+
       - name: Build Docker image
         run: |
           docker build -t ${{ env.SERVICE }} .

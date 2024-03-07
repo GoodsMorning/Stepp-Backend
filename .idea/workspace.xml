@@ -4,21 +4,8 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dc6d1bc6-7f35-453f-9953-cd4d0b11a17b" name="Changes" comment="use v2">
-      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.github/workflows/google-cloudrun-source.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/google-cloudrun-source.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_28_2_2024_AD_17_26_[Changes]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_28_2_2024_AD_17_26__Changes_.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Merge_at_27_2_2024_AD_23_33_[Changes]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Merge_at_27_2_2024_AD_23_33__Changes_.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Merge_at_28_2_2024_AD_17_16_[Changes]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Merge_at_28_2_2024_AD_17_16_[Changes]1/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Merge_at_28_2_2024_AD_17_16__Changes_.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Merge_at_28_2_2024_AD_17_16__Changes_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Merge_at_28_2_2024_AD_17_17_[Changes]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Merge_at_28_2_2024_AD_17_17__Changes_.xml" beforeDir="false" />
+    <list default="true" id="dc6d1bc6-7f35-453f-9953-cd4d0b11a17b" name="Changes" comment="fix Dockerfile port to 8080 same as expose">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -186,7 +173,8 @@
     <MESSAGE value="add gcloud docker auth" />
     <MESSAGE value="try v0" />
     <MESSAGE value="use v2" />
-    <option name="LAST_COMMIT_MESSAGE" value="use v2" />
+    <MESSAGE value="fix Dockerfile port to 8080 same as expose" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix Dockerfile port to 8080 same as expose" />
   </component>
   <component name="VgoProject">
     <settings-migrated>true</settings-migrated>
