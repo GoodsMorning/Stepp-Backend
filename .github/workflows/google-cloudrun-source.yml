@@ -51,7 +51,7 @@ jobs:
 
       - name: Deploy to Cloud Run
         run: |
-          gcloud run deploy ${{ env.SERVICE }} --image gcr.io/${{ env.PROJECT_ID }}/${{ env.SERVICE }}
+          gcloud run deploy ${{ env.SERVICE }} --image gcr.io/${{ env.PROJECT_ID }}/${{ env.SERVICE }} --region ${{ env.REGION }}
 #        id: deploy
 #        uses: google-github-actions/deploy-cloudrun@v2.2.0
 #        with:
