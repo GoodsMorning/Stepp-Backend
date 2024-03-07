@@ -4,8 +4,10 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dc6d1bc6-7f35-453f-9953-cd4d0b11a17b" name="Changes" comment="log all env">
+    <list default="true" id="dc6d1bc6-7f35-453f-9953-cd4d0b11a17b" name="Changes" comment="set envi by yml">
+      <change beforePath="$PROJECT_DIR$/.github/workflows/google-cloudrun-source.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/google-cloudrun-source.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -154,7 +156,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="init model" />
     <MESSAGE value="init db connection and credential" />
     <MESSAGE value="add vendor to gitignore" />
     <MESSAGE value="init git action" />
@@ -179,7 +180,8 @@
     <MESSAGE value="add region" />
     <MESSAGE value="log env" />
     <MESSAGE value="log all env" />
-    <option name="LAST_COMMIT_MESSAGE" value="log all env" />
+    <MESSAGE value="set envi by yml" />
+    <option name="LAST_COMMIT_MESSAGE" value="set envi by yml" />
   </component>
   <component name="VgoProject">
     <settings-migrated>true</settings-migrated>
