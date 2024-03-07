@@ -33,13 +33,9 @@ jobs:
           version: 'latest'
           project_id: ${{ env.PROJECT_ID }}
 
-      - name: Set environment variables
-        run: |
-          echo "ENVIRONMENT=RELEASE" >> $GITHUB_ENV
-
       - name: Build Docker image
         run: |
-          docker build --build-arg ENVIRONMENT=$ENVIRONMENT -t ${{ env.SERVICE }} .
+          docker build -t ${{ env.SERVICE }} .
           docker tag ${{ env.SERVICE }} gcr.io/${{ env.PROJECT_ID }}/${{ env.SERVICE }}
 
       - name: Authenticate Docker with GCR
@@ -49,6 +45,10 @@ jobs:
       - name: Push Docker image to Container Registry
         run: |
           docker push gcr.io/${{ env.PROJECT_ID }}/${{ env.SERVICE }}
+          
+
+#          gcloud run deploy stepp-backend --image gcr.io/senior-project-412514/stepp-backend
+
 
       - name: Deploy to Cloud Run
         run: |
