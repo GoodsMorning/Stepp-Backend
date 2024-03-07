@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dc6d1bc6-7f35-453f-9953-cd4d0b11a17b" name="Changes" comment="add region" />
+    <list default="true" id="dc6d1bc6-7f35-453f-9953-cd4d0b11a17b" name="Changes" comment="set envi in docker without =">
+      <change beforePath="$PROJECT_DIR$/.github/workflows/google-cloudrun-source.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/google-cloudrun-source.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/initializer/credential.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/initializer/credential.go" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -152,10 +155,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="init model" />
-    <MESSAGE value="init db connection and credential" />
-    <MESSAGE value="add vendor to gitignore" />
-    <MESSAGE value="init git action" />
     <MESSAGE value="fix version" />
     <MESSAGE value="setup-go v4" />
     <MESSAGE value="fix go version" />
@@ -175,7 +174,13 @@
     <MESSAGE value="install gcloud" />
     <MESSAGE value="gcloud self command" />
     <MESSAGE value="add region" />
-    <option name="LAST_COMMIT_MESSAGE" value="add region" />
+    <MESSAGE value="log env" />
+    <MESSAGE value="log all env" />
+    <MESSAGE value="set envi by yml" />
+    <MESSAGE value="set envi by run in yml" />
+    <MESSAGE value="set envi by run in docker" />
+    <MESSAGE value="set envi in docker without =" />
+    <option name="LAST_COMMIT_MESSAGE" value="set envi in docker without =" />
   </component>
   <component name="VgoProject">
     <settings-migrated>true</settings-migrated>

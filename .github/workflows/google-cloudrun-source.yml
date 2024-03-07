@@ -8,7 +8,6 @@ env:
   PROJECT_ID: senior-project-412514
   SERVICE: stepp-backend
   REGION: asia-southeast1
-  RELEASE: true
 
 jobs:
   deploy:
@@ -17,6 +16,7 @@ jobs:
       id-token: 'write'
 
     runs-on: ubuntu-latest
+
     steps:
       - name: Checkout
         uses: actions/checkout@v2
@@ -45,9 +45,6 @@ jobs:
       - name: Push Docker image to Container Registry
         run: |
           docker push gcr.io/${{ env.PROJECT_ID }}/${{ env.SERVICE }}
-          
-
-#          gcloud run deploy stepp-backend --image gcr.io/senior-project-412514/stepp-backend
 
       - name: Deploy to Cloud Run
         run: |

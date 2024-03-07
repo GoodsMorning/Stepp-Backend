@@ -12,7 +12,7 @@ import (
 
 func GetSecret(ctx context.Context) (*Credential, error) {
 
-	fmt.Println("PROJECT_NAME : " + os.Getenv("PROJECT_NAME"))
+	fmt.Println("GET CREDENTIAL")
 
 	client, err := secretmanager.NewClient(ctx)
 	if err != nil {
@@ -21,7 +21,7 @@ func GetSecret(ctx context.Context) (*Credential, error) {
 	defer client.Close()
 
 	req := &secretmanagerpb.AccessSecretVersionRequest{
-		Name: os.Getenv("PROJECT_NAME"),
+		Name: os.Getenv("PROJECT_ID"),
 	}
 
 	result, err := client.AccessSecretVersion(ctx, req)
