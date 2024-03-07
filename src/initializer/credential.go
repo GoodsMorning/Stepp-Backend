@@ -5,7 +5,6 @@ import (
 	"encoding/json"
 	"fmt"
 	"os"
-	"strconv"
 )
 
 func LoadCredential(ctx context.Context) (*Credential, error) {
