@@ -4,8 +4,7 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dc6d1bc6-7f35-453f-9953-cd4d0b11a17b" name="Changes" comment="rm strconv">
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+    <list default="true" id="dc6d1bc6-7f35-453f-9953-cd4d0b11a17b" name="Changes" comment="try port">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -158,7 +157,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="place post get no join ver" />
     <MESSAGE value="change version deploy cloud run to 2.2.0" />
     <MESSAGE value="change source to main.go and run after build" />
     <MESSAGE value="change source /" />
@@ -183,7 +181,8 @@
     <MESSAGE value="set project id to env" />
     <MESSAGE value="update" />
     <MESSAGE value="rm strconv" />
-    <option name="LAST_COMMIT_MESSAGE" value="rm strconv" />
+    <MESSAGE value="try port" />
+    <option name="LAST_COMMIT_MESSAGE" value="try port" />
   </component>
   <component name="VgoProject">
     <settings-migrated>true</settings-migrated>
