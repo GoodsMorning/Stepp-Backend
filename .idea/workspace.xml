@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dc6d1bc6-7f35-453f-9953-cd4d0b11a17b" name="Changes" comment="set envi by run in yml" />
+    <list default="true" id="dc6d1bc6-7f35-453f-9953-cd4d0b11a17b" name="Changes" comment="set envi by run in docker">
+      <change beforePath="$PROJECT_DIR$/src/initializer/credential.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/initializer/credential.go" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -152,7 +154,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="add vendor to gitignore" />
     <MESSAGE value="init git action" />
     <MESSAGE value="fix version" />
     <MESSAGE value="setup-go v4" />
@@ -177,7 +178,8 @@
     <MESSAGE value="log all env" />
     <MESSAGE value="set envi by yml" />
     <MESSAGE value="set envi by run in yml" />
-    <option name="LAST_COMMIT_MESSAGE" value="set envi by run in yml" />
+    <MESSAGE value="set envi by run in docker" />
+    <option name="LAST_COMMIT_MESSAGE" value="set envi by run in docker" />
   </component>
   <component name="VgoProject">
     <settings-migrated>true</settings-migrated>
