@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dc6d1bc6-7f35-453f-9953-cd4d0b11a17b" name="Changes" comment="set project id to env">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="dc6d1bc6-7f35-453f-9953-cd4d0b11a17b" name="Changes" comment="rm strconv" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -154,8 +152,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="setup-go v4" />
-    <MESSAGE value="fix go version" />
     <MESSAGE value="place post get no join ver" />
     <MESSAGE value="change version deploy cloud run to 2.2.0" />
     <MESSAGE value="change source to main.go and run after build" />
@@ -179,7 +175,9 @@
     <MESSAGE value="set envi by run in docker" />
     <MESSAGE value="set envi in docker without =" />
     <MESSAGE value="set project id to env" />
-    <option name="LAST_COMMIT_MESSAGE" value="set project id to env" />
+    <MESSAGE value="update" />
+    <MESSAGE value="rm strconv" />
+    <option name="LAST_COMMIT_MESSAGE" value="rm strconv" />
   </component>
   <component name="VgoProject">
     <settings-migrated>true</settings-migrated>
