@@ -8,7 +8,6 @@ env:
   PROJECT_ID: senior-project-412514
   SERVICE: stepp-backend
   REGION: asia-southeast1
-  RELEASE: true
 
 jobs:
   deploy:
@@ -17,6 +16,10 @@ jobs:
       id-token: 'write'
 
     runs-on: ubuntu-latest
+
+    env:
+      ENVIRONMENT: RELEASE
+
     steps:
       - name: Checkout
         uses: actions/checkout@v2

@@ -17,7 +17,7 @@ func LoadCredential(ctx context.Context) (*Credential, error) {
 		fmt.Println("envi : " + strconv.Itoa(i) + " " + v)
 	}
 
-	if os.Getenv("RELEASE") == "true" {
+	if os.Getenv("ENVIRONMENT") == "RELEASE" {
 		credential, err := GetSecret(ctx)
 		if err != nil {
 			return nil, err
