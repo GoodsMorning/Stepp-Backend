@@ -1,13 +1,12 @@
 package initializer
 
 import (
+	secretmanager "cloud.google.com/go/secretmanager/apiv1"
+	"cloud.google.com/go/secretmanager/apiv1/secretmanagerpb"
 	"context"
 	"encoding/json"
 	"fmt"
 	"os"
-
-	secretmanager "cloud.google.com/go/secretmanager/apiv1"
-	"cloud.google.com/go/secretmanager/apiv1/secretmanagerpb"
 )
 
 func GetSecret(ctx context.Context) (*Credential, error) {
