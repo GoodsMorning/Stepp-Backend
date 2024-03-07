@@ -5,17 +5,9 @@ import (
 	"encoding/json"
 	"fmt"
 	"os"
-	"strconv"
 )
 
 func LoadCredential(ctx context.Context) (*Credential, error) {
-
-	fmt.Println("try use env RELEASE =", os.Getenv("ENVIRONMENT"))
-
-	env := os.Environ()
-	for i, v := range env {
-		fmt.Println("envi : " + strconv.Itoa(i) + " " + v)
-	}
 
 	if os.Getenv("ENVIRONMENT") == "RELEASE" {
 		credential, err := GetSecret(ctx)
