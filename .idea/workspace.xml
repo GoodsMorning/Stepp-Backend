@@ -4,11 +4,7 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dc6d1bc6-7f35-453f-9953-cd4d0b11a17b" name="Changes" comment="rm port">
-      <change beforePath="$PROJECT_DIR$/.github/workflows/google-cloudrun-source.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/google-cloudrun-source.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
-    </list>
+    <list default="true" id="dc6d1bc6-7f35-453f-9953-cd4d0b11a17b" name="Changes" comment="deploy with specific external port" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -159,7 +155,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="change source to main.go and run after build" />
     <MESSAGE value="change source /" />
     <MESSAGE value="add mod vendor mod tidy" />
     <MESSAGE value="re structure and change source" />
@@ -184,7 +179,8 @@
     <MESSAGE value="rm strconv" />
     <MESSAGE value="try port" />
     <MESSAGE value="rm port" />
-    <option name="LAST_COMMIT_MESSAGE" value="rm port" />
+    <MESSAGE value="deploy with specific external port" />
+    <option name="LAST_COMMIT_MESSAGE" value="deploy with specific external port" />
   </component>
   <component name="VgoProject">
     <settings-migrated>true</settings-migrated>
