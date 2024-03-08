@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dc6d1bc6-7f35-453f-9953-cd4d0b11a17b" name="Changes" comment="docker external port">
+    <list default="true" id="dc6d1bc6-7f35-453f-9953-cd4d0b11a17b" name="Changes" comment="docker external port 8080">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -158,8 +157,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="add mod vendor mod tidy" />
-    <MESSAGE value="re structure and change source" />
     <MESSAGE value="try Dockerfile" />
     <MESSAGE value="rm Dockerfile" />
     <MESSAGE value="new Dockerfile" />
@@ -183,7 +180,9 @@
     <MESSAGE value="rm port" />
     <MESSAGE value="deploy with specific external port" />
     <MESSAGE value="docker external port" />
-    <option name="LAST_COMMIT_MESSAGE" value="docker external port" />
+    <MESSAGE value="docker external port 8080:8080" />
+    <MESSAGE value="docker external port 8080" />
+    <option name="LAST_COMMIT_MESSAGE" value="docker external port 8080" />
   </component>
   <component name="VgoProject">
     <settings-migrated>true</settings-migrated>
