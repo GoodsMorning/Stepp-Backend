@@ -49,13 +49,18 @@ jobs:
 
       - name: Deploy to Cloud Run
         run: |
-          gcloud run deploy ${{ env.SERVICE }} --image gcr.io/${{ env.PROJECT_ID }}/${{ env.SERVICE }} --region ${{ env.REGION }}
+          gcloud run deploy ${{ env.SERVICE }} \
+            --image gcr.io/${{ env.PROJECT_ID }}/${{ env.SERVICE }} \
+            --region ${{ env.REGION }} \
+            --port=8080
+
+      - name: Show Output
+        run: echo ${{ steps.deploy.outputs.url }}
+
+
 #        id: deploy
 #        uses: google-github-actions/deploy-cloudrun@v2.2.0
 #        with:
 #          service: ${{ env.SERVICE }}
 #          region: ${{ env.REGION }}
 #          image: gcr.io/${{ env.PROJECT_ID }}/${{ env.SERVICE }}
-
-      - name: Show Output
-        run: echo ${{ steps.deploy.outputs.url }}
