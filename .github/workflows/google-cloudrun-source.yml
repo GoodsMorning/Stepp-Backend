@@ -52,7 +52,7 @@ jobs:
           gcloud run deploy ${{ env.SERVICE }} \
             --image gcr.io/${{ env.PROJECT_ID }}/${{ env.SERVICE }} \
             --region ${{ env.REGION }} \
-            --port=8080
+            --port=8080:8080
 
       - name: Show Output
         run: echo ${{ steps.deploy.outputs.url }}
