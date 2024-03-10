@@ -31,7 +31,7 @@ func GetSecret(ctx context.Context) (*Credential, error) {
 	//	return nil, fmt.Errorf("failed to decode secret value: %v", err)
 	//}
 
-	file, err := os.Open("postgres.json")
+	file, err := os.Open("./postgres.json")
 	if err != nil {
 		fmt.Println("Error opening config file: /etc/secrets/postgres.json", err)
 		return nil, err
