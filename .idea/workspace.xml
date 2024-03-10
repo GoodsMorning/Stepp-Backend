@@ -4,10 +4,7 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dc6d1bc6-7f35-453f-9953-cd4d0b11a17b" name="Changes" comment="swap port">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/initializer/secret.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/initializer/secret.go" afterDir="false" />
-    </list>
+    <list default="true" id="dc6d1bc6-7f35-453f-9953-cd4d0b11a17b" name="Changes" comment="add ." />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -158,8 +155,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="rm Dockerfile" />
-    <MESSAGE value="new Dockerfile" />
     <MESSAGE value="add gcloud docker auth" />
     <MESSAGE value="try v0" />
     <MESSAGE value="use v2" />
@@ -183,7 +178,9 @@
     <MESSAGE value="docker external port 8080:8080" />
     <MESSAGE value="docker external port 8080" />
     <MESSAGE value="swap port" />
-    <option name="LAST_COMMIT_MESSAGE" value="swap port" />
+    <MESSAGE value="try use renderer" />
+    <MESSAGE value="add ." />
+    <option name="LAST_COMMIT_MESSAGE" value="add ." />
   </component>
   <component name="VgoProject">
     <settings-migrated>true</settings-migrated>
