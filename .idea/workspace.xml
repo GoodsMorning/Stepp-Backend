@@ -4,10 +4,9 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dc6d1bc6-7f35-453f-9953-cd4d0b11a17b" name="Changes" comment="add root path">
+    <list default="true" id="dc6d1bc6-7f35-453f-9953-cd4d0b11a17b" name="Changes" comment="file secret.go">
       <change beforePath="$PROJECT_DIR$/.github/workflows/google-cloudrun-source.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/google-cloudrun-source.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/initializer/credential.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/initializer/credential.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/initializer/secret.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/initializer/secret.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -160,7 +159,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="use v2" />
     <MESSAGE value="fix Dockerfile port to 8080 same as expose" />
     <MESSAGE value="install gcloud" />
     <MESSAGE value="gcloud self command" />
@@ -185,7 +183,8 @@
     <MESSAGE value="add ." />
     <MESSAGE value="root path" />
     <MESSAGE value="add root path" />
-    <option name="LAST_COMMIT_MESSAGE" value="add root path" />
+    <MESSAGE value="file secret.go" />
+    <option name="LAST_COMMIT_MESSAGE" value="file secret.go" />
   </component>
   <component name="VgoProject">
     <settings-migrated>true</settings-migrated>
