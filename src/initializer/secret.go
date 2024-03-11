@@ -9,11 +9,12 @@ import (
 
 func GetSecret(ctx context.Context) (*Credential, error) {
 
-	fmt.Println("GET CREDENTIAL")
-
+	//fmt.Println("GET CREDENTIAL")
+	//
 	//client, err := secretmanager.NewClient(ctx)
 	//if err != nil {
-	//	return nil, fmt.Errorf("failed to create Secret Manager client: %v", err)
+	//	fmt.Printf("failed to create Secret Manager client: %v\n", err)
+	//	return nil, err
 	//}
 	//defer client.Close()
 	//
@@ -31,7 +32,7 @@ func GetSecret(ctx context.Context) (*Credential, error) {
 	//	return nil, fmt.Errorf("failed to decode secret value: %v", err)
 	//}
 
-	file, err := os.Open("./postgres.json")
+	file, err := os.Open("postgres.json")
 	if err != nil {
 		fmt.Println("Error opening config file: /etc/secrets/postgres.json", err)
 		return nil, err
